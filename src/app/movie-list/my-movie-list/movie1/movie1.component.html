@@ -1,0 +1,31 @@
+<div class="card mb-3" style="max-width: 800px;">
+    <div class="row g-0"> 
+        
+      <div class="col-md-2 h-100"> 
+        <img src="{{movie.Poster_Link}}" class="img-fluid rounded-start" alt="..." width=200>
+      </div> 
+      <div class="col-md-8 d-flex align-items-center" > 
+        <div class="card-body">
+          <h5 class="card-title">{{movie.Series_Title}} ({{movie.Released_Year}})
+        </h5> 
+          <p class="card-text">{{movie.Overview}}</p>
+          <p class="card-text" ><small class="text-muted">IMDB: {{movie.IMDB_Rating}}</small> <br>
+          <small class="text-muted">Directed By: {{movie.Director}} </small>
+        </p> 
+        </div>
+      </div>
+    </div>
+</div>
+ 
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src={{movie.Poster_Link}} class="img-fluid" alt="Placeholder image">
+      </div>
+      <div class="col-md-6">
+        <h3>{{movie.Series_Title}}</h3>
+        <p>{{movie.Overview}}</p>
+      </div>
+    </div>
+  </div> 
+    -->

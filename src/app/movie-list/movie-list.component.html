@@ -1,0 +1,87 @@
+ 
+<div class="row">
+    <div class="column"><app-my-movie-list></app-my-movie-list>  </div> 
+    <div class="column">  <br> 
+        <form class="row g-3" (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="col-md-6">
+              <label for="movieName" class="form-label" >Movie Name </label>
+              <input  
+              type="email"  
+              class="form-control"  
+              id="movieName" 
+              ngModel 
+              name="movieName">
+            </div>
+            <div class="col-md-5">
+                <label for="releaseYear" class="form-label" >Release Year</label>
+                <input 
+                type="range"   
+                class="form-range"   
+                min="1900"  
+                max="2022"  
+                step="1"  
+                id="releaseYear" 
+                ngModel   
+                name="releaseYear" (change)="captureInput($event)"> 
+                {{releaseYear}} 
+                
+            </div>
+            <div class="col-md-6">
+              <label for="director" class="form-label">Director</label>
+              <input  
+              type="text"  
+              class="form-control"  
+              id="director" 
+              ngModel 
+              name="director">
+            </div>
+            <div class="col-md-5">
+                <div class="col-12">  
+                    <label for="genra" class="form-label">Genra</label>
+                <select id="genra" class="form-select" ngModel name="genra">
+                  <option selected>All</option>
+                  <option>Drama</option> 
+                  <option>Crime</option> 
+                  <option>Action</option> 
+                  <option>Adventure</option>
+                  <option>Biography</option> 
+                  <option>History</option>  
+                  <option>Sci-Fi</option>   
+                  <option>Mystery</option>
+                  <option>Romance</option> 
+                  <option>Fantasy</option> 
+                  <option>Comedy</option> 
+                  <option>Thriller</option> 
+                  <option>War</option>
+                </select>
+                     
+
+                
+                  </div>
+            </div>
+            <div class="col-md-11">
+                <label for="actors" class="form-label">Actors</label>
+                <input  
+                type="text"  
+                class="form-control"  
+                id="actors"  
+                placeholder="Seperate different actors with comma" 
+                ngModel 
+                name="actors"> 
+              </div>
+             
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="isMyFavourite">
+                <label class="form-check-label" for="isMyFavourite" ngmodel name="isMyFavourite">
+                  My Favourites
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Filter Movies</button>
+            </div>
+          </form>
+    </div>
+ 
+  </div>
